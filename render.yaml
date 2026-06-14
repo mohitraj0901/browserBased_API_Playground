@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: api-playground-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: ALLOW_PRIVATE_HOSTS
+        value: "false"
